@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="logo.webp" subtype="logo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHOTO CAFE</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+<div class="container">
+    <h1>PHOTO CAFE</h1>
+    <div class="image-container">
+
+        <div class="image"><img src="460410540_9143885108960909_7828423370488694522_n.jpg" alt=""></div>
+        <div class="image"><img src="460187487_9143885218960898_3199021224802198734_n.jpg" alt=""></div>
+        <div class="image"><img src="460401125_9143884868960933_183058475907312645_n.jpg" alt=""></div>
+        <div class="image"><img src="460396929_9143885322294221_2529740862413864269_n.jpg" alt=""></div>
+        <div class="image"><img src="460402151_9143884895627597_3479704689982317144_n.jpg" alt=""></div>
+        <div class="image"><img src="460592346_9143885278960892_5737531207568265484_n.jpg" alt=""></div>
+        <div class="image"><img src="460621946_9143884928960927_3218263338039514768_n.jpg" alt=""></div>
+        <div class="image"><img src="460624118_9143885155627571_5120438265239825521_n.jpg" alt=""></div>
+        <div class="image"><img src="460727559_9143885058960914_8476357883020890399_n.jpg" alt=""></div>
+        <div class="image"><img src="460727737_9143885018960918_1422776830724339905_n.jpg" alt=""></div>
+
+    </div>
+    <div class="popup-image">
+        <span>&times;</span>
+        <img src="460187487_9143885218960898_3199021224802198734_n.jpg" alt="">
+
+    </div>
+
+</div>
+
+<script>
+    document.querySelectorAll('.image-container img').forEach(Image =>{
+        Image.onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'block';
+            document.querySelector('.popup-image img').src = Image.getAttribute('src');
+        }
+    })
+
+    document.querySelector('.popup-image span').onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'none';
+    }
+
+
+</script>
+
+</body>
+</html>
